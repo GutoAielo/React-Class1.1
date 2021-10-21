@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manipuladores - AddEventListener</title>
+  </head>
+  <body>
+    <button type="button">Click here!</button>
+    <a href="#">Click here!</a>
+  </body>
+</html>
+
+<script>
+  var btn = document.querySelector('button')
+  var lnk = document.querySelector('a')
+
+  // manipulador eventos a partir do DOM2 (addEventListener)
+
+  btn.addEventListener('click', alerta)
+  function alerta(e) {
+    let o_event = e ? e : window.event
+    let msg = 'X position is: ' + o_event.screenX
+
+    window.alert(msg)
+  }
+</script>
